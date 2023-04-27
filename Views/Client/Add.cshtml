@@ -1,0 +1,22 @@
+﻿@model site.Models.AddClientViewModel
+
+@{
+}
+
+<h1>Добавить</h1>
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">PhoneNumber</label>
+        <input type="tel" class="form-control" asp-for="PhoneNumber">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Address</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+</form>

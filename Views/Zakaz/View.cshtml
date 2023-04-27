@@ -1,0 +1,51 @@
+﻿@model site.Models.UpdateZakazViewModel
+
+@{
+}
+
+<h1>Просмотр</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Клиент</label>
+        <input type="text" class="form-control" asp-for="ClientID">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">SkladId</label>
+        <input type="text" class="form-control" asp-for="SkladId">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Работник</label>
+        <input type="text" class="form-control" asp-for="EmployeeId">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">TovarId</label>
+        <input type="tel" class="form-control" asp-for="TovarId">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">NumberContact</label>
+        <input type="tel" class="form-control" asp-for="NumberContact">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Data</label>
+        <input type="date" class="form-control" asp-for="Data">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Adress</label>
+        <input type="text" class="form-control" asp-for="Adress">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Data</label>
+        <input type="date" class="form-control" asp-for="OrderDate">
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Zakaz">
+        Удалить
+    </button>
+</form>

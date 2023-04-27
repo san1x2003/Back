@@ -1,0 +1,31 @@
+﻿@model IList<site.Models.Domain.Post>
+
+@{
+}
+
+<h1>Post</h1>
+<a type="submit" class="btn btn-primary" asp-area="" asp-controller="Post" asp-action="Add">Добавить</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Identificator</th>
+            <th>Poost</th>
+            <th>TittlePost</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var post in Model)
+        {
+                            <tr>
+                <td>@post.Id</td>
+                <td>@post.Identificator</td>
+                <td>@post.Poost</td>
+                <td>@post.TittlePost</td>
+                <td><a href="Post/View/@post.Id">Просмотреть</a></td>
+                            </tr>
+        }
+    </tbody>
+</table>

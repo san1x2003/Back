@@ -1,0 +1,40 @@
+﻿@model IList<site.Models.Domain.Zakaz>
+
+@{
+}
+
+<h1>Заказы</h1>
+<a type="submit" class="btn btn-primary" asp-area="" asp-controller="Zakaz" asp-action="Add">Добавить</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>ClientID</th>
+            <th>SkladId</th>
+            <th>EmployeeId</th>
+            <th>TovarId</th>
+            <th>NumberContact</th>
+            <th>Data</th>
+            <th>Adress</th>
+            <th>OrderDate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var zakaz in Model)
+        {
+            <tr>
+                <td>@zakaz.Id</td>
+                <td>@zakaz.ClientID</td>
+                <td>@zakaz.SkladId</td>
+                <td>@zakaz.EmployeeId</td>
+                <td>@zakaz.TovarId</td>
+                <td>@zakaz.NumberContact</td>
+                <td>@zakaz.Data</td>
+                <td>@zakaz.Adress</td>
+                <td>@zakaz.OrderDate</td>
+                <td><a href="Zakaz/View/@zakaz.Id">Просмотреть</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

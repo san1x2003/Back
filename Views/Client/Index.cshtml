@@ -1,0 +1,31 @@
+﻿@model IList<site.Models.Domain.Client>
+
+@{
+}
+
+<h1>Client</h1>
+<a type="submit" class="btn btn-primary" asp-area="" asp-controller="Client" asp-action="Add">Добавить</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Address</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+                                <tr>
+                <td>@client.Id</td>
+                <td>@client.Email</td>
+                <td>@client.PhoneNumber</td>
+                <td>@client.Address</td>
+                <td><a href="Client/View/@client.Id">Просмотреть</a></td>
+                                </tr>
+        }
+    </tbody>
+</table>

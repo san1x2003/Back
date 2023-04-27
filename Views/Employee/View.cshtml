@@ -1,0 +1,35 @@
+﻿@model site.Models.UpdateEmployeeViewModel
+
+@{
+}
+
+<h1>Просмотр</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">PostId</label>
+        <input type="text" class="form-control" asp-for="PostId">
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Employee">
+        Удалить
+    </button>
+</form>

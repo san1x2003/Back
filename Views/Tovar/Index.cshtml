@@ -1,0 +1,31 @@
+﻿@model IList<site.Models.Domain.Tovar>
+
+@{
+}
+
+<h1>Tovar</h1>
+<a type="submit" class="btn btn-primary" asp-area="" asp-controller="Tovar" asp-action="Add">Добавить</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>DeliveryTime</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tovar in Model)
+        {
+            <tr>
+                <td>@tovar.Id</td>
+                <td>@tovar.Name</td>
+                <td>@tovar.Price</td>
+                <td>@tovar.DeliveryTime</td>
+                <td><a href="Tovar/View/@tovar.Id">Просмотреть</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

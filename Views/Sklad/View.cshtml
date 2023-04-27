@@ -1,0 +1,27 @@
+﻿@model site.Models.UpdateSkladViewModel
+
+@{
+}
+
+<h1>Просмотр</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+       <div class="mb-3">
+        <label for="" class="form-label">NumberSklad</label>
+        <input type="text" class="form-control" asp-for="NumberSklad">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Adress</label>
+        <input type="text" class="form-control" asp-for="Adress">
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Sklad">
+        Удалить
+    </button>
+</form>

@@ -1,0 +1,31 @@
+﻿@model site.Models.UpdatePostViewModel
+
+@{
+}
+
+<h1>Просмотр</h1>
+<form method="post" action="View">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+   <div class="mb-3">
+        <label for="" class="form-label">Identificator</label>
+        <input type="text" class="form-control" asp-for="Identificator">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Post</label>
+        <input type="number" class="form-control" asp-for="Poost">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">TittlePost</label>
+        <input type="text" class="form-control" asp-for="TittlePost">
+    </div>
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+
+    <button type="submit" class="btn btn-danger"
+            asp-action="Delete"
+            asp-controller="Post">
+        Удалить
+    </button>
+</form>
